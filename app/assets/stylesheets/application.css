@@ -1,0 +1,127 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require bootstrap-3.2.0.min
+ *= require jquery-ui.min
+ *= require jquery-ui.structure.min
+ *= require jquery-ui.theme.min
+ *= require_tree .
+ *= require_self
+ *= require rails_bootstrap_forms
+ */
+
+.tasks_main_container {
+	margin-top: 60px;
+	text-align: center;
+}
+
+.rslides {
+	position: relative;
+}
+
+.facebook_login_main_page {
+	position: absolute;
+	margin-right: 20px;
+	z-index: 3;
+	padding: 20px;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+}
+
+.facebook_login_main_page a {
+	color: white;
+}
+
+th {
+	text-align: center;
+}
+
+.button_to {
+	display: inline-block;
+}
+
+#sortable { list-style-type: none; width: 100%; }
+  /*#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+  #sortable li span { position: absolute; margin-left: -1.3em; }*/
+#sortable li {font-size: 1.4em; height: 18px; }
+#sortable li span { position: absolute}
+
+.new_task_inner_container {
+	margin-top: 60px;
+	margin-left: 20px;
+}
+
+.homepage_images_container {
+	position: relative;
+}
+
+.homepage_text_container {
+	position: absolute;
+	top: 0;
+	/*left: 0;*/
+	margin-top: 200px;
+	text-align: center;
+	width: 100%;
+	z-index: 3;
+	font-size: 150px;
+	font-weight: 400;
+	text-shadow: grey 2px 2px 2px;
+	font-family: "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+	color: white;
+}
+
+.homepage_lower_bar_container {
+	width: 100%;
+	height: 100px;
+	margin-top: 600px;
+	background-color: RGBA(63, 63, 63, .75);
+	position: absolute;
+	top:	0;
+	z-index: 3;
+}
+
+.homepage_lower_bar_writing {
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	padding: 20px;
+	/*font-family: "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";*/
+}
+
+.events__main_container {
+	margin-top: 60px;
+	margin-left: 20px;
+	font-size: 17px;
+}
+
+.events__main_container
+
+.edit_task_main_container {
+	margin-top: 60px;
+	margin-left: 20px;
+}
+
+.about_main_container {
+	margin-top: 60px;
+	margin-left: 20px;
+}
+
+.users_homepage_main_container {
+	margin-top: 60px;
+	margin-left: 20px;
+}
+
+.new_event_main_container {
+	margin-top: 60px;
+}
+

@@ -1,0 +1,24 @@
+<%= render "layouts/navbar" %>
+
+<div class="new_task_main_container">
+	<div class="new_task_inner_container">
+		<div class="row">
+			<div class="col-xs-4 col-xs-offset-4">
+				<h2>New Task</h2>
+				<%= bootstrap_form_for @task do |f| %>
+
+					<%= f.text_field :content, placeholder: "Task" %>
+					<%= f.text_field :user_id, placeholder: "Who's Bringing What" %>
+					<%= f.text_field :cost, placeholder: "Cost" %>
+					<%= f.check_box :complete %>
+					<%= f.submit "Save Task" %>
+
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+

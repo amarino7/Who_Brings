@@ -1,0 +1,10 @@
+<%= render "layouts/navbar" %>
+
+<div>
+	<%= @task.content %><br>
+	<%= @task.user_id %><br>
+	<%= @task.cost %><br>
+	<%= @task.complete %><br>
+	<%= button_to "Delete", destroy_task_path(@event , @task), method: :delete %>
+	<%= link_to "Edit", edit_task_path(@event, @task) %>
+</div>
