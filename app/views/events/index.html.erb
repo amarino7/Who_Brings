@@ -11,7 +11,7 @@
 					<ul>
 						<% @events.each do |event| %>
 						<li>
-							<div class="events_title_container">Title: <%=event.title%>
+							<div class="events_title_container"><%= link_to event.title, "/events/#{event.id}"%>
 							</div>
 							<div>Description: <%=event.description%>
 							</div>
@@ -24,7 +24,7 @@
 							<div>End Time: <%=event.end_time%>
 							</div>
 							<%= link_to "Edit Event", "/events/#{event.id}/edit" %> <br>
-							
+
 							<%= link_to "Create New Task List", "/events/#{event.id}/tasks/new" %> <br>
 							<%= link_to "Current Task List", "/events/#{event.id}/tasks" %>
 						</li> <br><br>

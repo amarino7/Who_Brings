@@ -26,6 +26,9 @@
               <div>
                 <%= f.submit %>
               </div>
+              <div>
+                <%= button_to "Delete", "/events/#{@event.id}", method: :delete %>
+              </div>
           <% end %>
       </div>
     </div>
