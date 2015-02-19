@@ -82,6 +82,20 @@ body {
 	text-align: center;
 }
 
+.tasks_table_container {
+	margin-left: 350px;
+	margin-right: 350px;
+	margin-top: 10px;
+	margin-bottom: 100px;
+	height: 680px;
+	width: 800px;
+	border-radius: 10px;
+	overflow-y: scroll;
+	position: fixed;
+	background-color: white;
+	font-size: 16px;
+}
+
 th {
 	text-align: center;
 }
@@ -96,7 +110,7 @@ th {
 #sortable li {font-size: 1.4em; height: 18px; }
 #sortable li span { position: absolute}
 
-.new_task_inner_container {
+/*.new_task_inner_container {
 	margin-top: 60px;
 	margin-left: 20px;
 }
@@ -104,7 +118,7 @@ th {
 .edit_task_main_container {
 	margin-top: 60px;
 	margin-left: 20px;
-}
+}*/
 
 .events_body_container {
 	margin-top: 60px;
