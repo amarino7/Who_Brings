@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   	user = User.confirm(user_params[:email], user_params[:password])
   	if user
   		login(user)
-  		redirect_to user_path(user.id)
+  		redirect_to events_path
   	else
   		flash[:error] = "Failed to Authenticate. Please try again!"
   		redirect_to "/login"
