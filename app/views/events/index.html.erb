@@ -1,35 +1,34 @@
-<div class="body_container">	
+<div class="event_body_container">	
 
 	<%= render "layouts/navbar" %>
-
-
-
-	<div class="row">
-		<div class="col-xs-4 col-xs-offset-4">
-			<div class="events_main_container">
-				<h1>Events</h1>
-				<%= link_to "Create a New Event", "/events/new" %>
-				<ul>
-					<% @events.each do |event| %>
-					<li>
-						<div>Title: <%=event.title%>
-						</div>
-						<div>Description: <%=event.description%>
-						</div>
-						<div>Start Date: <%=event.start_date%>
-						</div>
-						<div>End Date: <%=event.end_date%>
-						</div>
-						<div>Start Time: <%=event.start_time%>
-						</div>
-						<div>End Time: <%=event.end_time%>
-						</div>
-						<%= link_to "Edit Event", "/events/#{event.id}/edit" %> <br>
-						<%= link_to "Create New Task List", "/events/#{event.id}/tasks/new" %> <br>
-						<%= link_to "Current Task List", "/events/#{event.id}/tasks" %>
-					</li>
-					<% end %>
-				</ul>
+	<div class="events_main_container">
+		<div class="row">
+			<div class="col-xs-5 col-xs-offset-3">
+				<div class="events_main_title_container">
+					<h1>Events</h1>
+					<%= link_to "Create a New Event", "/events/new" %>
+				</div> <br>
+					<ul>
+						<% @events.each do |event| %>
+						<li>
+							<div class="events_title_container">Title: <%=event.title%>
+							</div>
+							<div>Description: <%=event.description%>
+							</div>
+							<div>Start Date: <%=event.start_date%>
+							</div>
+							<div>End Date: <%=event.end_date%>
+							</div>
+							<div>Start Time: <%=event.start_time%>
+							</div>
+							<div>End Time: <%=event.end_time%>
+							</div>
+							<%= link_to "Edit Event", "/events/#{event.id}/edit" %> <br>
+							<%= link_to "Create New Task List", "/events/#{event.id}/tasks/new" %> <br>
+							<%= link_to "Current Task List", "/events/#{event.id}/tasks" %>
+						</li> <br><br>
+						<% end %>
+					</ul>
 			</div>
 		</div>
 	</div>
