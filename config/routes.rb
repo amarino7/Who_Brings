@@ -15,7 +15,15 @@ Rails.application.routes.draw do
   get "/contact", to: "site#contact"
   get "/about", to: "site#about"
 
-  resources :events
+  # resources :events
+  get  "/users/user_id/events", to: "events#index", as: "events"
+  post "/events(.:format)", to: "events#create"
+  get  "/events/new(.:format)", to: "events#new"
+  get  "/events/:id/edit(.:format)", to: "events#edit"
+  get  "/events/:id(.:format)", to: "events#show"
+  patch "/events/:id(.:format)", to: "events#update"
+  put   "/events/:id(.:format)", to: "events#update"
+  delete "/events/:id(.:format)", to: "events#destroy"
 
   get "/events/:event_id/tasks", to: "tasks#index", as: "tasks"
   get "/events/:event_id/tasks/new", to: "tasks#new", as: "new_task"
