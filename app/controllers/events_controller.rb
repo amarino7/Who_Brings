@@ -23,13 +23,13 @@ class EventsController < ApplicationController
 	def create
 		event = Event.create(event_params)
 		respond_to do |format|
-			format.html { redirect_to "/events#event.id" }
+			format.html { redirect_to "/users/user_id/events#event.id" }
 			format.json { render json: @event }
 		end
 	end
 
 	def edit
-		event_id = params[:id]
+		event_id = params[:event_id]
 		@event = Event.find(event_id)
 		render :edit
 	end
@@ -41,7 +41,7 @@ class EventsController < ApplicationController
 		# redirect_to task_path
 
 		respond_to do |format|
-			format.html { redirect_to "/events#event.id" }
+			format.html { redirect_to "/users/user_id/events#event.id" }
 			format.json { render json: @events }
 		end
 	end
@@ -52,7 +52,7 @@ class EventsController < ApplicationController
 		@event.destroy
 
 		respond_to do |format|
-			format.html { redirect_to "/events" }
+			format.html { redirect_to user_event_path }
 			format.json { render json: @events }
 		end
 	end

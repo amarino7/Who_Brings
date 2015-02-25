@@ -5,7 +5,7 @@ class TasksController < ApplicationController
 	def index
 		@tasks = @event.tasks.all
 
-		
+
 
 		# @task.find(task_id).user.name
 		# user_id = params[:user_id]
@@ -18,6 +18,7 @@ class TasksController < ApplicationController
 	end
 
 	def new
+		@event = Event.find(params[:event_id])
 		@task = Task.new
 		render :new
 	end
@@ -27,7 +28,7 @@ class TasksController < ApplicationController
 		@task = @event.tasks.create(new_task)
 		respond_to do |format|
 			# format.html { redirect_to "/users/#{@user.id}/tasks/#{task.id}" }
-			format.html { redirect_to "/events/#{@event.id}/tasks" }
+			format.html { redirect_to "/users/:user_id/events/:event_id/tasks" }
 			format.json { render json: @task }
 		end
 	end
@@ -55,7 +56,7 @@ class TasksController < ApplicationController
 		# redirect_to task_path
 
 		respond_to do |format|
-			format.html { redirect_to "/events/#{@event.id}/tasks" }
+			format.html { redirect_to "/users/:user_id/events/:event_id/tasks" }
 			format.json { render json: @tasks }
 		end
 	end
@@ -66,16 +67,18 @@ class TasksController < ApplicationController
 		task.destroy
 
 		respond_to do |format|
-			format.html { redirect_to "/events/#{@event.id}/tasks" }
+			format.html { redirect_to "/users/:user_id/events/:event_id/tasks" }
 			format.json { render json: @tasks }
 		end
 	end
 
 	private
+	
 		def get_event
 			event_id = params[:event_id]
 			@event = Event.find(event_id)
 		end
+
 
 end
 

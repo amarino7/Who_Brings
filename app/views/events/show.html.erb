@@ -8,11 +8,11 @@
 
 				<%= @event.title %><br>
 				<%= @event.description %><br>
-				<%= @event.start_date.month %><br>
+				<%= @event.start_date %><br>
 				<%= @event.end_date %><br>
 				<%= @event.start_time %><br>
 				<%= @event.end_time %><br>
-				<%= button_to "Delete", "/events/#{@event.id}", method: :delete %>
+				<%= button_to "Delete", "/users/:user_id/events/:event_id", method: :delete %>
 
 			</div>
 		</div>
