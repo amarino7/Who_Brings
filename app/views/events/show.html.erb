@@ -12,8 +12,7 @@
 				<%= @event.end_date %><br>
 				<%= @event.start_time %><br>
 				<%= @event.end_time %><br>
-				<%= button_to "Delete", "/users/:user_id/events/:event_id", method: :delete %>
-
+				<%= button_to "Delete", user_event_path(current_user.id, @event.id), method: :delete %>
 			</div>
 		</div>
 	</div>

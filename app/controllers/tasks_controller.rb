@@ -27,8 +27,8 @@ class TasksController < ApplicationController
 		new_task = params.require(:task).permit(:content, :user_id, :cost, :complete)
 		@task = @event.tasks.create(new_task)
 		respond_to do |format|
-			# format.html { redirect_to "/users/#{@user.id}/tasks/#{task.id}" }
-			format.html { redirect_to "/users/:user_id/events/:event_id/tasks" }
+			
+			format.html { redirect_to user_event_tasks_path(current_user.id, event_id, @task) }
 			format.json { render json: @task }
 		end
 	end

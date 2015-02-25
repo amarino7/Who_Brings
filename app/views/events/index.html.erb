@@ -11,7 +11,7 @@
 					<ul>
 						<% @events.each do |event| %>
 						<li>
-							<div class="events_title_container"><%= link_to event.title, "/users/:user_id/events/#{event.id}"%>
+							<div class="events_title_container"><%= link_to event.title, user_event_path(current_user.id, event.id)%>
 							</div>
 							<div>Description: <%=event.description%>
 							</div>
@@ -23,7 +23,7 @@
 							</div>
 							<div>End Time: <%=event.end_time%>
 							</div>
-							<%= link_to "Edit Event", "/users/:user_id/events/:event_id/edit" %> <br>
+							<%= link_to "Edit Event", edit_user_event_path(current_user.id, event.id) %> <br>
 
 							<%= link_to "Create New Task List", new_user_event_task_path(current_user.id, event.id) %> <br>
 							<%= link_to "Current Task List", user_event_tasks_path(current_user.id, event.id) %>
