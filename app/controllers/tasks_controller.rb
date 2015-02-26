@@ -34,7 +34,7 @@ class TasksController < ApplicationController
 	end
 
 	def show
-		task_id = params[:task_id]
+		task_id = params[:id]
 		@task = @event.tasks.find(task_id)
 		respond_to do |format|
 			format.html
@@ -43,13 +43,13 @@ class TasksController < ApplicationController
 	end
 
 	def edit
-		task_id = params[:task_id]
+		task_id = params[:id]
 		@task = @event.tasks.find(task_id)
 		render :edit
 	end
 
 	def update
-		task_id = params[:task_id]
+		task_id = params[:id]
 		task = @event.tasks.find(task_id)
 		updated_attrs = params.require(:task).permit(:content, :user_id, :cost, :complete)
 		task.update_attributes(updated_attrs)
@@ -62,8 +62,8 @@ class TasksController < ApplicationController
 	end
 
 	def destroy
-		task_id = params[:task_id]
-		task = @event.tasks.find(task_id)
+		task_id = params[:id]
+		@task = @event.tasks.find(task_id)
 		@task.destroy
 
 		respond_to do |format|

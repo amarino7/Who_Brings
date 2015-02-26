@@ -7,7 +7,7 @@ class OmniauthController < ApplicationController
 	    session[:user_id] = user.id
 
 	    # Redirect
-	    redirect_to user_events_path(:user_id), notice: "You logged in!"
+	    redirect_to user_events_path(current_user.id), notice: "You logged in!"
 
     end
     def destroy

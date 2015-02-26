@@ -34,6 +34,7 @@ gem 'omniauth-facebook'
 
 #.env gem
 gem 'dotenv-rails', :groups => [:development, :test]
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
