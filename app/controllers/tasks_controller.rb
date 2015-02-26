@@ -28,7 +28,7 @@ class TasksController < ApplicationController
 		@task = @event.tasks.create(new_task)
 		respond_to do |format|
 			
-			format.html { redirect_to user_event_tasks_path(current_user.id, event_id, @task) }
+			format.html { redirect_to user_event_tasks_path(current_user.id, @event.id) }
 			format.json { render json: @task }
 		end
 	end
@@ -56,18 +56,18 @@ class TasksController < ApplicationController
 		# redirect_to task_path
 
 		respond_to do |format|
-			format.html { redirect_to "/users/:user_id/events/:event_id/tasks" }
+			format.html { redirect_to user_event_tasks_path(current_user.id, @event.id) }
 			format.json { render json: @tasks }
 		end
 	end
 
 	def destroy
-		id = params[:task_id]
-		task = @event.tasks.find(id)
-		task.destroy
+		task_id = params[:task_id]
+		task = @event.tasks.find(task_id)
+		@task.destroy
 
 		respond_to do |format|
-			format.html { redirect_to "/users/:user_id/events/:event_id/tasks" }
+			format.html { redirect_to user_event_tasks_path(current_user.id, @event.id) }
 			format.json { render json: @tasks }
 		end
 	end
