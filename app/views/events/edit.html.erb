@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-xs-4 col-xs-offset-4">
        <h1>Edit Event</h1>
-    <%= bootstrap_form_for(@event, url: user_event_path(@current_user.id, @event)) do |f| %>
+    <%= bootstrap_form_for(@event, url: user_event_path(@current_user.id, @event.id)) do |f| %>
               <div>
               Event Title: <%= f.text_field :title %>
               </div>
@@ -25,9 +25,6 @@
               </div>
               <div>
                 <%= f.submit %>
-              </div>
-              <div>
-                <%= button_to "Delete", user_event_path(current_user.id, @event.id), method: :delete %>
               </div>
           <% end %>
       </div>

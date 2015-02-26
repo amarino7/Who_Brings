@@ -2,7 +2,7 @@ class EventsController < ApplicationController
 	# before_action :logged_in?, :authorized_user?, only: [:index, :new, :show, :edit]
 
 	def index
-		@events = Event.all
+		@events = current_user.events.all
 	end
 
 	def new
@@ -11,7 +11,6 @@ class EventsController < ApplicationController
 	end
 
 	def show
-		#byebug
 		event_id = params[:id]
 		@event = Event.find(event_id)
 		respond_to do |format|
@@ -21,7 +20,7 @@ class EventsController < ApplicationController
 	end
 
 	def create
-		event = Event.create(event_params)
+		@event = current_user.events.create(event_params)
 		respond_to do |format|
 			format.html { redirect_to user_events_path(current_user.id, @event) }
 			format.json { render json: @event }
@@ -36,7 +35,7 @@ class EventsController < ApplicationController
 
 	def update
 		event_id = params[:id]
-		@event = Event.find(event_id)
+		@event = current_user.events.find(event_id)
 		@event.update_attributes(event_params)
 		
 		respond_to do |format|
@@ -47,7 +46,7 @@ class EventsController < ApplicationController
 
 	def destroy
 		event_id = params[:id]
-		@event = Event.find(event_id)
+		@event = current_user.events.find(event_id)
 		@event.destroy
 
 		respond_to do |format|
