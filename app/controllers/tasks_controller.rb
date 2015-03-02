@@ -24,7 +24,7 @@ class TasksController < ApplicationController
 	end
 
 	def create
-		new_task = params.require(:task).permit(:content, :user_id, :cost, :complete)
+		new_task = params.require(:task).permit(:content, :name, :cost, :complete)
 		@task = @event.tasks.create(new_task)
 		respond_to do |format|
 			
@@ -51,7 +51,7 @@ class TasksController < ApplicationController
 	def update
 		task_id = params[:id]
 		task = @event.tasks.find(task_id)
-		updated_attrs = params.require(:task).permit(:content, :user_id, :cost, :complete)
+		updated_attrs = params.require(:task).permit(:content, :name, :cost, :complete)
 		task.update_attributes(updated_attrs)
 		# redirect_to task_path
 

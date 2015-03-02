@@ -14,7 +14,7 @@
 					<tr>
 						<th>Content</th>
 						<th>Who</th>
-						<th>Cost</th>
+						<th>Cost $</th>
 					</tr>
 					</div>
 				</thead>
@@ -24,7 +24,7 @@
 
 				<tr>
 					<td><%= link_to task.content, user_event_task_path(current_user.id, @event.id, task.id) %></td>	
-					<td><%=task.user_id%></td>
+					<td><%=task.name%></td>
 					<td><%=task.cost%></td>
 					<td><%= button_to "Delete", user_event_task_path(@current_user.id, @event.id, task.id), method: :delete %>
 					<%= button_to 'Edit', edit_user_event_task_path(@current_user.id, @event.id, task.id ), :method => "get" %></td>

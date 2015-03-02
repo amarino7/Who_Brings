@@ -75,13 +75,23 @@
 
 body {
 	/*background-color: RGBA(86, 72, 89, .75);*/
-	/*background-color: RGBA(4, 149, 172, .75);*/
-	background-color: RGBA(131, 166, 3, 1);
+	background-color: RGBA(4, 149, 172, .75);
+	/*background-color: RGBA(131, 166, 3, 1);*/
+	background-image: url("http://thumbs.dreamstime.com/x/blurred-background-5041748.jpg");
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+
+
 }
 
 .tasks_main_container {
 	margin-top: 60px;
 	text-align: center;
+}
+
+.new_task_inner_container {
+	color: white;
 }
 
 .tasks_table_container {
@@ -130,6 +140,7 @@ th {
 
 .events_main_container a {
 	font-size: 18px;
+	color: RGBA(0, 132, 132, 1);
 
 }
 
@@ -138,15 +149,17 @@ th {
 	margin-right: 350px;
 	margin-top: 60px;
 	margin-bottom: 100px;
-	height: 680px;
+	/*height: 680px;*/
+	height: 100%;
 	width: 800px;
 	/*border-radius: 10px;*/
 	/*border: 10px solid RGBA(253, 187, 67, 1);*/
-	border:	10px solid RGBA(242, 230, 167, 1);
-	outline: solid 3px white;
+	border:	5px solid RGBA(242, 230, 167, 1);
+/*	outline: solid 3px white;*/
+
 	overflow-y: scroll;
 	position: fixed;
-	background-color: white;
+	background-color: RGBA(255, 255, 255, .9);
 	font-size: 16px;
 }
 
@@ -160,6 +173,7 @@ th {
 
 .new_event_main_container {
 	margin-top: 60px;
+	color: white;
 }
 
 .events_show_main_container {
@@ -196,6 +210,13 @@ th {
 	background-color: white;
 	font-size: 16px;
 	text-align: center;
+}
+
+.about_main_container p {
+	margin-top: 150px;
+	margin-left: 40px;	
+	margin-right: 40px;
+	font-size: 20px;
 }
  
 .users_homepage_main_container {

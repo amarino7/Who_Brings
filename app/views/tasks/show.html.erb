@@ -1,16 +1,23 @@
 <%= render "layouts/navbar" %>
-
-<div>
-	<%= @task.content %><br>
-	<%= @task.user_id %><br>
-	<%= @task.cost %><br>
-	<%= @task.complete %><br>
-
-
-	<%= button_to "Delete", user_event_task_path(@current_user.id, @event.id, @task.id), method: :delete %>
-	<%= button_to 'Edit', edit_user_event_task_path(@current_user.id, @event.id, @task.id ), :method => "get" %>
+<div class="tasks_main_container">
+	<div class="new_task_inner_container">
+		<div class="row">
+			<div class="col-xs-4 col-xs-offset-4">
+				<%= @task.content %><br>
+				<%= @task.name %><br>
+				<%= @task.cost %><br>
+				<%= @task.complete %><br>
 
 
+				<%= button_to "Delete", user_event_task_path(@current_user.id, @event.id, @task.id), method: :delete %>
+				<%= button_to 'Edit', edit_user_event_task_path(@current_user.id, @event.id, @task.id ), :method => "get" %>
+		
+			</div>
+		</div>
+	</div>
 </div>
+
+
+
 
 

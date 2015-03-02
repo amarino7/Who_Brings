@@ -1,18 +1,20 @@
 <%= render "layouts/navbar" %>
 
 <div class="tasks_main_container">
-	<div class="row">
-		<div class="col-xs-4 col-xs-offset-4">
-			<h2>Update Task</h2>
-			<%= bootstrap_form_for(@task, url: user_event_task_path(@current_user.id, @event.id, @task.id)) do |f| %>
+	<div class="new_task_inner_container">
+		<div class="row">
+			<div class="col-xs-4 col-xs-offset-4">
+				<h2>Update Task</h2>
+				<%= bootstrap_form_for(@task, url: user_event_task_path(@current_user.id, @event.id, @task.id)) do |f| %>
 
-						<%= f.text_field :content, placeholder: "Task" %>
-						<%= f.text_field :user_id, placeholder: "Who's Bringing What" %>
-						<%= f.text_field :cost, placeholder: "Cost" %>
-						<%= f.check_box :complete %>
-						<%= f.submit "Update Task" %>
+							<%= f.text_field :content, placeholder: "Task" %>
+							<%= f.text_field :name, placeholder: "Who's Bringing What" %>
+							<%= f.text_field :cost, placeholder: "Cost" %>
+							<%= f.check_box :complete %>
+							<%= f.submit "Update Task" %>
 
-			<% end %>
+				<% end %>
+			</div>
 		</div>
 	</div>
 </div>

@@ -8,7 +8,7 @@
 				<%= bootstrap_form_for(@task, url: user_event_tasks_path(@current_user.id, @event.id)) do |f| %>
 
 					<%= f.text_field :content, placeholder: "Task" %>
-					<%= f.text_field :user_id, placeholder: "Who's Bringing What" %>
+					<%= f.text_field :name, placeholder: "Who's Bringing What" %>
 					<%= f.text_field :cost, placeholder: "Cost" %>
 					<%= f.check_box :complete %>
 					<%= f.submit "Save Task" %>
