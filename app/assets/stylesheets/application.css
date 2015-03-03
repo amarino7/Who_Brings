@@ -29,6 +29,10 @@
 
 }
 
+.homepage_text_container body {
+	background-color: black;
+}
+
 .homepage_text_container {
 	position: absolute;
 	top: 0;
