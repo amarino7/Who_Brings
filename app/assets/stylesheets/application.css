@@ -29,8 +29,9 @@
 
 }
 
-.homepage_text_container body {
+#homepage_body_container {
 	background-color: black;
+	z-index: 2;
 }
 
 .homepage_text_container {
@@ -64,7 +65,7 @@
 	text-align: center;
 	font-size: 40px;
 	padding: 20px;
-	/*font-family: "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";*/
+	font-family: "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
 }
 .rslides {
 	position: relative;
@@ -92,8 +93,6 @@ body {
 	background-size: cover;
 	height: 100%;
 	width: 100%;
-
-
 }
 
 .tasks_main_container {
@@ -128,7 +127,6 @@ th {
 .events_main_container a {
 	font-size: 18px;
 	color: RGBA(0, 132, 132, 1);
-
 }
 
 .events_main_container {
@@ -138,7 +136,6 @@ th {
 	height: 100%;
 	width: 800px;
 	border:	5px solid RGBA(240, 195, 2, 1);
-	border-bottom: none;
 	overflow-y: scroll;
 	position: fixed;
 	background-color: RGBA(255, 255, 255, .9);
@@ -160,6 +157,10 @@ th {
 	color: white;
 }
 
+.events_show_title {
+	font-size: 20px;
+}
+
 .about_main_container {
 	margin-left: 350px;
 	margin-right: 350px;
@@ -167,7 +168,6 @@ th {
 	height: 100%;
 	width: 800px;
 	border:	5px solid RGBA(240, 195, 2, 1);
-	border-bottom: none;
 	overflow-y: scroll;
 	position: fixed;
 	background-color: RGBA(255, 255, 255, .9);
@@ -190,3 +190,9 @@ th {
 	margin-top: 60px;
 	margin-left: 20px;
 }
+
+.navbar a {
+	color: white;
+	font-size: 20px;
+}
+

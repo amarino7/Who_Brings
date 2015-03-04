@@ -6,14 +6,17 @@
 			<div class="events_body_container">
 				<div class="row">
 					<div class="col-xs-6 col-xs-offset-4">
-
+					<div class="events_show_title">
 					<%= @event.title %><br>
+					<!-- </div> -->
 					<%= @event.description %><br>
 					<%= @event.start_date %><br>
 					<%= @event.end_date %><br>
 					<%= @event.start_time %><br>
 					<%= @event.end_time %><br>
+					</div>
 					<%= button_to "Delete", user_event_path(current_user.id, @event.id), method: :delete %>
+
 				</div>
 			</div>
 		</div>
