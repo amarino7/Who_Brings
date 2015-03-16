@@ -54,7 +54,7 @@
 	height: 100px;
 	/*margin-top: 600px;*/
 	margin-top: 40%;
-	background-color: RGBA(63, 63, 63, .75);
+	/*background-color: RGBA(63, 63, 63, .75);*/
 	position: absolute;
 	top:	0;
 	z-index: 3;
@@ -126,7 +126,7 @@ th {
 
 .events_main_container a {
 	font-size: 18px;
-	color: RGBA(0, 132, 132, 1);
+	color: RGBA(0, 132, 132, 1);p
 }
 
 .events_main_container {
